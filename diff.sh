@@ -7,11 +7,11 @@ remotes=$(git remote show)
 git remote show | grep -q '^upstream$'
 remote_exists=$?
 if [[ $remote_exists -ne 0 ]] ; then
-  git remote add upstream $upstream > /dev/null
+  git remote add upstream $upstream
 fi
 
 # diff against upstream master
-git fetch upstream
+git fetch upstream -q
 changed_files=$(git diff upstream/master --name-only)
 
 for file in $changed_files ; do
