@@ -45,6 +45,7 @@ function lintAll(suggestions, filePaths) {
   });
 
   if(failed.length > 0) {
+    console.log(JSON.stringify(failed));
     console.log(`There were ${failed.length} failures`);
     process.exit(1);
   } else {
