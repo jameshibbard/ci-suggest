@@ -45,8 +45,10 @@ function lintAll(suggestions, filePaths) {
   });
 
   if(failed.length > 0) {
+    console.log(`There were ${failed.length} failures`);
     process.exit(1);
   } else {
+    console.log('Tests passed!');
     process.exit(0);
   }
 }
