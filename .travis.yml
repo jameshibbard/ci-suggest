@@ -2,5 +2,7 @@ language: node_js
 node_js:
   - "4.1"
 before_install:
+  - echo "PWD $PWD"
+  - ls -lah
   - chmod 600 .deploy_key
   - ssh-add .deploy_key
