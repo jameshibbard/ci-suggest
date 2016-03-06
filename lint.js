@@ -20,7 +20,7 @@ function lintOne(suggestions, text) {
       );
     }
 
-    return !Boolean(matches);
+    return matches;
   });
 
   return errors.length > 0;
@@ -31,9 +31,9 @@ function lintAll(suggestions, filePaths) {
     try {
       const buffer = fs.readFileSync(p);
       const file = buffer.toString();
-      const passed = lintOne(suggestions, file);
+      const failed = lintOne(suggestions, file);
 
-      if(!passed) {
+      if(failed) {
         console.log(`In ${clor.blue(p)}\n`);
         return true;
       }
@@ -47,7 +47,6 @@ function lintAll(suggestions, filePaths) {
   });
 
   if(failed.length > 0) {
-    console.log(JSON.stringify(failed));
     console.log(`There were ${failed.length} failures`);
     process.exit(1);
   } else {
