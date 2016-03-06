@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "4.1"
-after_install:
+before_script:
   - eval "$(ssh-agent -s)"
   - chmod 600 .travis/deploy-key
   - ssh-add .travis/deploy-key
