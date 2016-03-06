@@ -36,9 +36,10 @@ function lintAll(suggestions, filePaths) {
       if(!passed) {
         console.log(`In ${clor.blue(p)}\n`);
       }
+      return true;
     } catch(ex) {
       console.error(`Could not read ${p}!`);
-      throw ex;
+      console.error(ex);
       return false;
     }
   });
