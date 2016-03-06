@@ -18,3 +18,9 @@ echo "Javascript is a silly language" > article.md
 git add article.md
 npm test
 ```
+
+## Is that a private key?!?
+There's no way to add an SSH key to public Travis Repo
+The only way to add an SSH to Travis for public repos is through an encrypted file or env var. Neither of these will be exposed to pull requests, which is the whole point of this project. Instead, generate and add a read-only deploy key to the repo then add it to git.
+
+If this is moved over to a private CI platform in the future, it'll be possible to add the key there instead.

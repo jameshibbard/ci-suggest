@@ -2,6 +2,5 @@ language: node_js
 node_js:
   - "4.1"
 before_install:
-  - echo "$DEPLOY_KEY" > .travis/deploy_key.pem
-  - chmod 600 .travis/deploy_key.pem
-  - ssh-add .travis/deploy_key.pem
+  - chmod 600 .deploy_key
+  - ssh-add .deploy_key
