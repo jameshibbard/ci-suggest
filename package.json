@@ -1,0 +1,23 @@
+{
+  "name": "ci-suggest",
+  "version": "1.0.0",
+  "description": "Check changed files for flagged terms and offer suggestions with CI.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./diff.sh | node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danprince/ci-suggest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danprince/ci-suggest/issues"
+  },
+  "homepage": "https://github.com/danprince/ci-suggest#readme",
+  "dependencies": {
+    "clor": "^2.0.2"
+  }
+}
