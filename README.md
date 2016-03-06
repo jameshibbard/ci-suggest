@@ -1,4 +1,6 @@
 # ci-suggest
+[![Build Status](https://travis-ci.org/danprince/ci-suggest.svg?branch=master)](https://travis-ci.org/danprince/ci-suggest)
+
 Check changed files for flagged terms and offer suggestions with CI.
 
 Install dependencies with `npm install` then run linter with `npm test`.
